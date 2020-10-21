@@ -26,3 +26,8 @@ function correctAnswer4() {
     alert("You're Answer is Correct. Great Job!!")
     window.location.href = "/Alldone"
 }
+
+function highScoreLoad() {
+    const name = window.localStorage.name;
+    document.querySelector("#name").textContent = name;
+}
