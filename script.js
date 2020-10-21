@@ -8,23 +8,30 @@ function wrongAnswer() {
 }
 
 function correctAnswer1() {
-    alert("You're Answer is Correct. Here's You're Next Question.")
-    window.location.href = "/Question2"
+    document.querySelector("#result").textContent = "You're Answer is Correct. Here's You're Next Question.";
+    setTimeout(function() {
+        window.location.href = "/Question2"
+    }, 500);
 }
 
 function correctAnswer2() {
-    alert("You're Answer is Correct. Here's You're Next Question.")
-    window.location.href = "/Question3"
+    document.querySelector("#result").textContent = "You're Answer is Correct. Here's You're Next Question.";
+    setTimeout(function() {
+        window.location.href = "/Question3"
+    }, 500);
 }
 
 function correctAnswer3() {
-    alert("You're Answer is Correct. Here's You're Next Question.")
-    window.location.href = "/Question4"
+    document.querySelector("#result").textContent = "You're Answer is Correct. Here's You're Next Question.";
+    setTimeout(function() {
+        window.location.href = "/Question4"
+    }, 500);
 }
-
 function correctAnswer4() {
-    alert("You're Answer is Correct. Great Job!!")
-    window.location.href = "/Alldone"
+    document.querySelector("#result").textContent = "You're Answer is Correct. Here's You're Next Question.";
+    setTimeout(function() {
+        window.location.href = "/Alldone"
+    }, 500);
 }
 
 function highScoreLoad() {
