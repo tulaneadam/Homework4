@@ -31,3 +31,9 @@ function highScoreLoad() {
     const name = window.localStorage.name;
     document.querySelector("#name").textContent = name;
 }
+
+function onNameSubmit() {
+    window.localStorage.name = document.querySelector("#name").value;
+    window.location.href = "/Highscore";
+}
+
