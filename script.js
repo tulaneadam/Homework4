@@ -4,8 +4,7 @@ function beginQuiz(){
 }
 
 function wrongAnswer() {
-    alert("You Chose The Wrong Answer, Please Try Again!")
-    
+    document.querySelector("#result").textContent = "You Chose The Wrong Answer, Please Try Again!";
 }
 
 function correctAnswer1() {
