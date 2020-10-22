@@ -60,3 +60,30 @@ function startTimer() {
       }
     , 1000);
   }
+
+  if(window.location.href.includes('Question')){
+    startTimer();
+}
+
+if(window.location.href.includes('Alldone')){
+    processScore();
+}
+
+function processScore(){
+    const score = localStorage.getItem('seconds');
+    document.querySelector('#score').textContent = score;
+}
+
+function onScoreSubmit() {
+    window.localStorage.name = document.querySelector("#name").value;
+    const score = window.localStorage.getItem('seconds');
+    window.localStorage.setItem('score', score);
+    window.location.href = "/Highscore";
+}
+
+function highScoreLoad() {
+    const name = window.localStorage.name;
+    const score = window.localStorage.getItem('score')
+    document.querySelector("#name").textContent = name;
+    document.querySelector("#score").textContent = score;
+}
