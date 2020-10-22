@@ -6,6 +6,7 @@ function beginQuiz(){
 
 function wrongAnswer() {
     document.querySelector("#result").textContent = "You Chose The Wrong Answer, Please Try Again!";
+    window.localStorage.setItem('seconds', seconds-10);
 }
 
 function correctAnswer1() {
