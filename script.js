@@ -1,6 +1,7 @@
 function beginQuiz(){
     console.log("beginQuiz")
     window.location.href = "/Question1"
+    
 }
 
 function wrongAnswer() {
@@ -44,3 +45,18 @@ function onNameSubmit() {
     window.location.href = "/Highscore";
 }
 
+let started = null;
+let seconds = localStorage.getItem('seconds') || 500;
+if(window.location.href.includes('Question1')){
+    seconds = 500;
+}
+
+function startTimer() {
+    document.querySelector("#timer").textContent = seconds;
+    started = setInterval(function() { 
+      document.querySelector("#timer").textContent = seconds;
+      localStorage.setItem('seconds', seconds);
+      seconds--; 
+      }
+    , 1000);
+  }
